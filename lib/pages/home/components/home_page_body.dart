@@ -12,7 +12,7 @@ class HomePageBody extends StatelessWidget {
     return Column(
       children: [
         Stack(
-          overflow: Overflow.visible,
+          clipBehavior: Clip.none,
           children: <Widget>[
             Container(
               height: size.height * .15,
@@ -27,8 +27,8 @@ class HomePageBody extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       "Notes",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -37,8 +37,10 @@ class HomePageBody extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: null,
-                      icon: Icon(
+                      onPressed: () {
+                        debugPrint("HELLO");
+                      },
+                      icon: const Icon(
                         Icons.menu,
                         size: 40,
                         color: greyClr,
@@ -49,15 +51,19 @@ class HomePageBody extends StatelessWidget {
               ),
             ),
             Positioned(
-              // 35 is somehow a magical number here that makes the button
+              // 30 is somehow a magical number here that makes the button
               // align right were i want
               // todo test on other phone sizes
-              top: (size.height * 0.15) - 35,
-              left: ((size.width) / 2) - 35,
-              child: const FloatingActionButton(
-                onPressed: null,
+              // ? works on a smaller phone, not sure if itll work on even smaller ones
+              top: (size.height * 0.15) - 30,
+              left: ((size.width) / 2) - 30,
+              child: FloatingActionButton(
+                onPressed: () {
+                  debugPrint("Pressed");
+                },
                 backgroundColor: darkRedClr,
-                child: Icon(
+                elevation: 20,
+                child: const Icon(
                   Icons.add,
                   size: 30,
                 ),
