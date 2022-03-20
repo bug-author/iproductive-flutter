@@ -11,15 +11,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: myAppBar(),
       body: const HomePageBody(),
-      floatingActionButton: const FloatingActionButton(
-        backgroundColor: darkRedClr,
-        elevation: 0,
-        onPressed: null,
-        child: Icon(
-          Icons.add,
-          size: 32,
-        ),
-      ),
     );
   }
 
