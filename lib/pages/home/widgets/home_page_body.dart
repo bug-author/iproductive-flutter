@@ -20,7 +20,7 @@ class HomePageBody extends StatelessWidget {
         const NoteCard(note: "Code"),
         const NoteCard(
             note:
-                "some large ass text some large ass text some large ass text some large ass text"),
+                "some large ass text some large ass text some large ass text some large ass text abcd asd askd sandsd sdsa"),
       ],
     );
   }

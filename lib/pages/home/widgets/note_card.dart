@@ -12,10 +12,12 @@ class NoteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 15),
-      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.only(right: 10, top: 15, bottom: 15),
       width: size.width * .8,
-      height: size.height * 0.15,
+      // ! removing hardcoded height and moving text inside
+      // ! expanded adjusts the height as per text length
+      // height: size.height * 0.1,
       decoration: BoxDecoration(
         color: darkRedClr,
         borderRadius: BorderRadius.circular(15),
@@ -31,7 +33,7 @@ class NoteCard extends StatelessWidget {
               color: greyClr,
             ),
           ),
-          Flexible(
+          Expanded(
             // love you hogaya ji
             // https://stackoverflow.com/questions/51930754/flutter-wrapping-text
             child: Text(
