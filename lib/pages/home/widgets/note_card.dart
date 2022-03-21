@@ -34,8 +34,6 @@ class NoteCard extends StatelessWidget {
             ),
           ),
           Expanded(
-            // love you hogaya ji
-            // https://stackoverflow.com/questions/51930754/flutter-wrapping-text
             child: Text(
               note,
               style: const TextStyle(
