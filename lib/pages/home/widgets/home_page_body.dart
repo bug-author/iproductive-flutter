@@ -9,19 +9,35 @@ class HomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     // get total height and width of screen
     Size size = MediaQuery.of(context).size;
+    const List<NoteCard> notes = [
+      NoteCard(note: "🚀🚀🚀"),
+      NoteCard(note: "What percent of devs actually read docs? 🤔🤔🤔"),
+      NoteCard(note: "Exercise"),
+      NoteCard(note: "Podcasts"),
+      NoteCard(note: "AHHHHHHH"),
+      NoteCard(note: "Code"),
+      NoteCard(
+          note:
+              "some large ass text some large ass text some large ass text some large ass text abcd asd askd sandsd sdsa"),
+    ];
 
-    return Column(
-      children: [
-        const TopBar(),
-        SizedBox(
-          height: size.height * 0.05,
+    return Column(mainAxisSize: MainAxisSize.max, children: [
+      const TopBar(),
+      SizedBox(
+        height: size.height * 0.05,
+      ),
+      Flexible(
+          child: Container(
+        constraints: BoxConstraints(
+          maxWidth: size.width * 0.8,
         ),
-        const NoteCard(note: "🚀🚀🚀"),
-        const NoteCard(note: "Code"),
-        const NoteCard(
-            note:
-                "some large ass text some large ass text some large ass text some large ass text abcd asd askd sandsd sdsa"),
-      ],
-    );
+        child: ListView.builder(
+          itemBuilder: (ctx, idx) {
+            return notes[idx];
+          },
+          itemCount: notes.length,
+        ),
+      ))
+    ]);
   }
 }

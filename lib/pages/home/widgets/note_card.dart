@@ -12,8 +12,8 @@ class NoteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10),
-      padding: const EdgeInsets.only(right: 10, top: 15, bottom: 15),
+      margin: const EdgeInsets.only(top: 8, bottom: 16),
+      padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
       width: size.width * .8,
       // ! removing hardcoded height and moving text inside
       // ! expanded adjusts the height as per text length
