@@ -7,8 +7,6 @@ class HomePageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // get total height and width of screen
-    Size size = MediaQuery.of(context).size;
     const List<NoteCard> notes = [
       NoteCard(note: "🚀🚀🚀"),
       NoteCard(note: "What percent of devs actually read docs? 🤔🤔🤔"),
@@ -20,6 +18,8 @@ class HomePageBody extends StatelessWidget {
           note:
               "some large ass text some large ass text some large ass text some large ass text abcd asd askd sandsd sdsa"),
     ];
+    // get total height and width of screen
+    Size size = MediaQuery.of(context).size;
 
     return Column(mainAxisSize: MainAxisSize.max, children: [
       const TopBar(),
