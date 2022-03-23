@@ -17,6 +17,7 @@ class HomePageBody extends StatelessWidget {
       NoteCard(
           note:
               "some large ass text some large ass text some large ass text some large ass text abcd asd askd sandsd sdsa"),
+      NoteCard(note: "Code"),
     ];
     // get total height and width of screen
     Size size = MediaQuery.of(context).size;

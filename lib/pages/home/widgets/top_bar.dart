@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:iproductive/pages/home/new_note/utils/new_note_dialog.dart';
 import '../../../constants.dart';
 
 class TopBar extends StatelessWidget {
@@ -18,8 +18,8 @@ class TopBar extends StatelessWidget {
           decoration: const BoxDecoration(
             color: whiteClr,
             borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(33),
-              bottomRight: Radius.circular(33),
+              bottomLeft: Radius.circular(40),
+              bottomRight: Radius.circular(40),
             ),
           ),
           child: Padding(
@@ -57,8 +57,8 @@ class TopBar extends StatelessWidget {
           top: (size.height * 0.15) - 30,
           left: ((size.width) / 2) - 30,
           child: FloatingActionButton(
-            onPressed: () {
-              debugPrint("Pressed");
+            onPressed: () async {
+              newNoteDialog(context);
             },
             backgroundColor: darkRedClr,
             elevation: 20,

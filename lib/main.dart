@@ -14,10 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'iProductive',
       theme: ThemeData(
         primaryColor: whiteClr,
         scaffoldBackgroundColor: greyClr,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: darkGreyClr,
+        ),
       ),
       home: const HomePage(),
     );
