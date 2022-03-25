@@ -37,15 +37,7 @@ class MyApp extends StatelessWidget {
           secondary: darkGreyClr,
         ),
       ),
-      // home: const HomePage(),
-      home: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            signUp();
-          },
-          child: const Text("Test the Firebase connection!"),
-        ),
-      ),
+      home: const HomePage(),
     );
   }
 }
