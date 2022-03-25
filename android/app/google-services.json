@@ -1,0 +1,39 @@
+{
+    "project_info": {
+      "project_number": "853717897734",
+      "project_id": "iproductive-dc81e",
+      "storage_bucket": "iproductive-dc81e.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:853717897734:android:2e5c2d088ff30acab4e987",
+          "android_client_info": {
+            "package_name": "com.example.iproductive"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "853717897734-dn2flkto3tgoasursv1bhrd2en5gdt21.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyDFaWnSncr6vL5AzKnHt4VWYPMugSZVF_Q"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "853717897734-dn2flkto3tgoasursv1bhrd2en5gdt21.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
