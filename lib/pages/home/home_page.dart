@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
   }
 
   AppBar myAppBar() {
+    // todo combined logic for tabbed + curved bottom + stacked button
     return AppBar(
       backgroundColor: whiteClr,
       elevation: 0,

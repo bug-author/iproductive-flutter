@@ -23,6 +23,7 @@ class HomePageBody extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Column(mainAxisSize: MainAxisSize.max, children: [
+      // todo try preffered size widget for top bar implementation instead of separate code for app bar and top bar
       const TopBar(),
       SizedBox(
         height: size.height * 0.05,
