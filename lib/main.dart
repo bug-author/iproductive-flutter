@@ -3,6 +3,7 @@ import 'package:iproductive/constants.dart';
 import 'package:iproductive/pages/home/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+import 'package:iproductive/pages/signup/sign_up.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
           secondary: darkGreyClr,
         ),
       ),
-      home: const HomePage(),
+      home: const SignUp(),
     );
   }
 }
