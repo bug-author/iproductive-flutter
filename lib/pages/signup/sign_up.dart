@@ -29,11 +29,23 @@ class SignUp extends StatelessWidget {
             height: 20,
           ),
           const Text(
-            "Make your daily shenanigans productive!",
+            "maintain better workflows!",
             style: TextStyle(
-              color: Colors.white70,
+              color: darkRedClr,
               fontFamily: "Avenir",
-              fontSize: 20,
+              fontSize: 22,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            "🚀 🎯 💪 ",
+            style: TextStyle(
+              color: darkRedClr,
+              fontFamily: "Avenir",
+              fontSize: 24,
             ),
           ),
           const SizedBox(
