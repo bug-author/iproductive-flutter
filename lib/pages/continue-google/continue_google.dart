@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iproductive/constants.dart';
+import 'package:iproductive/services/auth_service.dart';
 
 class ContinueWithGoogle extends StatefulWidget {
   const ContinueWithGoogle({Key? key}) : super(key: key);
@@ -10,6 +11,8 @@ class ContinueWithGoogle extends StatefulWidget {
 }
 
 class _ContinueWithGoogleState extends State<ContinueWithGoogle> {
+  AuthClass authClass = AuthClass();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -63,8 +66,8 @@ class _ContinueWithGoogleState extends State<ContinueWithGoogle> {
             width: size.width - 60,
             height: 65,
             child: InkWell(
-              onTap: () {
-                debugPrint("Firebase integration");
+              onTap: () async {
+                await authClass.googleSignIn(context);
               },
               child: Card(
                 color: Colors.black45,
