@@ -52,7 +52,7 @@ class SignUp extends StatelessWidget {
               child: Card(
                 color: Colors.black45,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(19),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
