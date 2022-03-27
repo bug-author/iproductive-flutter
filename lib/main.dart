@@ -3,7 +3,7 @@ import 'package:iproductive/constants.dart';
 import 'package:iproductive/pages/continue-google/continue_google.dart';
 import 'package:iproductive/pages/home/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+import 'package:iproductive/services/auth_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,17 +11,29 @@ void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   MyApp({Key? key}) : super(key: key);
 
-  firebase_auth.FirebaseAuth firebaseAuth = firebase_auth.FirebaseAuth.instance;
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
-  void signUp() async {
-    try {
-      await firebaseAuth.createUserWithEmailAndPassword(
-          email: 'abdi@gmail.com', password: '123445');
-    } catch (e) {
-      debugPrint(e.toString());
+class _MyAppState extends State<MyApp> {
+  Widget currentPage = const ContinueWithGoogle();
+  AuthClass authClass = AuthClass();
+
+  @override
+  void initState() {
+    super.initState();
+    checkLogin();
+  }
+
+  void checkLogin() async {
+    String? token = await authClass.getToken();
+    if (token != null) {
+      setState(() {
+        currentPage = const HomePage();
+      });
     }
   }
 
@@ -38,7 +50,7 @@ class MyApp extends StatelessWidget {
           secondary: darkGreyClr,
         ),
       ),
-      home: const ContinueWithGoogle(),
+      home: currentPage,
     );
   }
 }
