@@ -39,20 +39,18 @@ class _ContinueWithGoogleState extends State<ContinueWithGoogle> {
           const Text(
             "maintain better workflows!",
             style: TextStyle(
-              color: darkRedClr,
+              color: redClr,
               fontFamily: "Avenir",
-              fontSize: 22,
+              fontSize: 19,
               fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           ),
           const Text(
             "🚀 🎯 💪 ",
             style: TextStyle(
-              color: darkRedClr,
-              fontFamily: "Avenir",
               fontSize: 24,
             ),
           ),
